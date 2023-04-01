@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kiedypyli-pl/static/css/main.65c253c6.css",
-    "main.js": "/kiedypyli-pl/static/js/main.cacfe673.js",
+    "main.js": "/kiedypyli-pl/static/js/main.82fb81f8.js",
     "static/js/787.cde8279b.chunk.js": "/kiedypyli-pl/static/js/787.cde8279b.chunk.js",
     "index.html": "/kiedypyli-pl/index.html",
     "main.65c253c6.css.map": "/kiedypyli-pl/static/css/main.65c253c6.css.map",
-    "main.cacfe673.js.map": "/kiedypyli-pl/static/js/main.cacfe673.js.map",
+    "main.82fb81f8.js.map": "/kiedypyli-pl/static/js/main.82fb81f8.js.map",
     "787.cde8279b.chunk.js.map": "/kiedypyli-pl/static/js/787.cde8279b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65c253c6.css",
-    "static/js/main.cacfe673.js"
+    "static/js/main.82fb81f8.js"
   ]
 }
