@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Allergen from "./components/Allergen";
+import {useState} from "react";
+import AllergensCheckboxes from "./components/AllergensCheckboxes";
+import allAllergens from "./allergensData";
+
+const months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 
 function App() {
+  const [renderedAllergens, setRenderedAllergens] = useState(allAllergens);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>KiedyPyli.pl</h1>
+      <AllergensCheckboxes allAllergens={allAllergens} setRenderedAllergens={setRenderedAllergens}/>
+      <table>
+        <thead>
+        <tr>
+          <td/>
+          {months.map(month => <th key={month} colSpan="3" scope="colgroup">{month}</th>)}
+        </tr>
+        </thead>
+        <tbody>
+        {renderedAllergens.map(allergen => (<Allergen key={allergen.name} allergen={allergen}/>))}
+        </tbody>
+      </table>
     </div>
   );
 }
