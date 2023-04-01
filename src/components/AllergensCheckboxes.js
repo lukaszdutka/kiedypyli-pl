@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
 
 function AllergensCheckboxes({allAllergens, setRenderedAllergens}) {
-  const [yourAllergenNames, setYourAllergenNames] = useState([], () => {
-    const localData = localStorage.getItem("allergy-filters");
-    return localData ? JSON.parse(localData) : [];
-  });
+  const [yourAllergenNames, setYourAllergenNames] = useState(
+    localStorage.getItem("allergy-filters")
+      ? JSON.parse(localStorage.getItem("allergy-filters"))
+      : []
+  );
 
   useEffect(() => {
     localStorage.setItem("allergy-filters", JSON.stringify(yourAllergenNames))
